@@ -7,7 +7,7 @@ COARSE_GRAIN_ATOMS = {
     "pyrimidine": ["N1", "C2", "C4"]
 }
 
-ALLOWED_RESIDUES = ["A", "G", "C", "U", "T"]
+ALLOWED_RESIDUES = ["A", "G", "C", "U"]
 
 class CoarseGrainSelect(Select):
     def accept_atom(self, atom):
@@ -24,7 +24,7 @@ class CoarseGrainSelect(Select):
         if residue_name in ["A", "G"] and atom_name in COARSE_GRAIN_ATOMS["purine"]:
             return True
 
-        if residue_name in ["C", "U", "T"] and atom_name in COARSE_GRAIN_ATOMS["pyrimidine"]:
+        if residue_name in ["C", "U"] and atom_name in COARSE_GRAIN_ATOMS["pyrimidine"]:
             return True
         return False
 
