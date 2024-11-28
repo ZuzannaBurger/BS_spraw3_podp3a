@@ -38,7 +38,7 @@ def parse_arguments():
 
 def convert_to_coarse_grain(input_file, output_file):
     parser = PDBParser(QUIET=True)
-    structure = parser.get_structure("RNA", input_file)
+    structure = parser.get_structure("Protein", input_file)
 
     io = PDBIO()
     io.set_structure(structure)
